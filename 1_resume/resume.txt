@@ -1,0 +1,246 @@
+# Assignment 1: Simple Blockchain in Python with Hashing & Linked Blocks
+
+## Title
+
+Create a Simple Blockchain in Python using Hashing and Linked Blocks
+
+---
+
+# Aim
+
+To implement a simple blockchain system in Python using cryptographic hashing and linked blocks.
+
+---
+
+# Objective
+
+* To understand the working of blockchain technology.
+* To create blocks connected using hashes.
+* To implement SHA-256 hashing.
+* To understand immutability and chain verification.
+* To simulate how blockchain securely stores data.
+
+---
+
+# Theory
+
+Blockchain is a distributed digital ledger used to store information securely in the form of blocks. Each block contains data, timestamp, previous block hash, and its own hash. The blocks are connected together using cryptographic hashes, forming a secure chain.
+
+Blockchain provides:
+
+* Security
+* Transparency
+* Immutability
+* Decentralization
+
+The hash of each block depends on:
+
+* Block data
+* Timestamp
+* Previous block hash
+
+If the data of one block changes, the hash changes completely, making the blockchain invalid.
+
+---
+
+# Important Concepts
+
+## 1. Block
+
+A block is a container that stores:
+
+* Data
+* Timestamp
+* Previous hash
+* Current hash
+
+## 2. Genesis Block
+
+The first block in the blockchain.
+
+## 3. Hashing
+
+Hashing converts input data into a fixed-length unique value.
+
+## 4. SHA-256
+
+SHA-256 is a secure cryptographic hashing algorithm commonly used in blockchain.
+
+## 5. Previous Hash
+
+Each block stores the hash of the previous block to maintain chain integrity.
+
+## 6. Immutability
+
+Data cannot be modified without changing all subsequent hashes.
+
+---
+
+# Formula / Hashing Concept
+
+Hash = SHA256(Data + Timestamp + Previous_Hash)
+
+---
+
+# Algorithm
+
+1. Create a Block class.
+2. Store data, timestamp, previous hash, and current hash.
+3. Generate hash using SHA-256.
+4. Create Genesis Block.
+5. Create Blockchain class.
+6. Add new blocks to chain.
+7. Link each block using previous hash.
+8. Verify blockchain integrity.
+
+---
+
+# Flowchart
+
+Create Genesis Block → Generate Hash → Add New Block → Link Previous Hash → Store in Blockchain → Verify Integrity
+
+---
+
+# Modules Used
+
+* hashlib
+* datetime
+
+---
+
+# Explanation of Code
+
+The program creates a simple blockchain system using Python. A Block class is created to represent each block in the blockchain. Every block contains transaction data, timestamp, previous block hash, and its own hash generated using SHA-256.
+
+The Blockchain class manages the complete blockchain. It first creates the genesis block and then allows new blocks to be added. Each new block stores the hash of the previous block, creating a linked structure.
+
+The SHA-256 hashing algorithm is used to generate secure hashes. If any block data changes, the hash changes completely, breaking the chain and showing tampering.
+
+The blockchain can also be verified by checking whether each block’s previous hash matches the hash of the previous block.
+
+---
+
+# Output
+
+* Blockchain created successfully.
+* Blocks linked using hashes.
+* Hashes generated using SHA-256.
+* Chain verification completed.
+
+---
+
+# Advantages
+
+* Secure data storage
+* Tamper detection
+* Transparency
+* Decentralization
+* Data integrity
+
+---
+
+# Limitations
+
+* High computational cost
+* Scalability issues
+* Slower processing compared to databases
+
+---
+
+# Applications of Blockchain
+
+* Cryptocurrency
+* Voting systems
+* Supply chain management
+* Healthcare records
+* Banking systems
+
+---
+
+# Viva Questions and Answers
+
+## Q1. What is blockchain?
+
+Blockchain is a distributed digital ledger where blocks are securely linked using hashes.
+
+## Q2. What is a block?
+
+A block stores data, timestamp, previous hash, and current hash.
+
+## Q3. What is hashing?
+
+Hashing converts data into a fixed-length unique value.
+
+## Q4. Which hashing algorithm is used?
+
+SHA-256.
+
+## Q5. Why use SHA-256?
+
+Because it is secure and collision-resistant.
+
+## Q6. What is genesis block?
+
+The first block in the blockchain.
+
+## Q7. Why store previous hash?
+
+To securely connect blocks and maintain chain integrity.
+
+## Q8. What happens if one block changes?
+
+Its hash changes and the entire chain becomes invalid.
+
+## Q9. What is immutability?
+
+Blockchain data cannot be modified without affecting all linked blocks.
+
+## Q10. Why blockchain is secure?
+
+Because blocks are linked using cryptographic hashes.
+
+## Q11. Why use timestamp?
+
+To record the time when block is created.
+
+## Q12. Why use encode() before hashing?
+
+SHA-256 works on bytes, not strings.
+
+## Q13. What does hexdigest() do?
+
+Converts hash into readable hexadecimal format.
+
+## Q14. What is decentralization?
+
+No single authority controls the blockchain.
+
+## Q15. Blockchain vs Database?
+
+Blockchain is decentralized and immutable, while database is centralized and editable.
+
+## Q16. What is collision in hashing?
+
+When two different inputs generate the same hash.
+
+## Q17. What is avalanche effect?
+
+A small change in input completely changes the hash.
+
+## Q18. Applications of blockchain?
+
+Cryptocurrency, healthcare, voting, banking, and supply chain.
+
+## Q19. How to verify blockchain?
+
+By checking hashes and previous hash links.
+
+## Q20. Explain your assignment flow.
+
+Create genesis block → generate hash → add new blocks → link previous hashes → verify blockchain.
+
+---
+
+# Conclusion
+
+This assignment demonstrates the core concepts of blockchain technology using Python. It shows how blocks are linked securely using SHA-256 hashing and previous hashes. The project helps in understanding blockchain integrity, immutability, and secure data storage.

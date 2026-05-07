@@ -1,0 +1,317 @@
+# Assignment: Analyze Bitcoin Block Structure and Compute Merkle Root for Sample Transactions
+
+---
+
+# Title
+
+Analyze Bitcoin Block Structure and Compute Merkle Root using Python
+
+---
+
+# Aim
+
+To analyze the structure of a Bitcoin block and compute the Merkle Root for sample transactions using SHA-256 hashing. 
+
+---
+
+# Objective
+
+* To understand Bitcoin block structure.
+* To study transaction hashing.
+* To construct a Merkle Tree.
+* To compute the Merkle Root.
+* To understand blockchain data integrity.
+
+---
+
+# Theory
+
+A Bitcoin block contains:
+
+* Block header
+* Transactions
+* Merkle Root
+* Previous block hash
+* Timestamp
+* Nonce
+
+The Merkle Root is a single hash representing all transactions in a block. It is generated using a Merkle Tree, where transaction hashes are repeatedly combined and hashed until one final hash remains.
+
+Merkle Trees help:
+
+* Verify transactions efficiently
+* Detect tampering
+* Maintain blockchain integrity
+
+In this assignment, transactions are read from a file, hashed using SHA-256, and combined recursively to compute the final Merkle Root.
+
+---
+
+# Important Concepts
+
+## 1. Bitcoin Block
+
+A structure that stores transaction data and metadata in blockchain.
+
+---
+
+## 2. Transaction Hash
+
+Unique SHA-256 hash generated for each transaction.
+
+---
+
+## 3. Merkle Tree
+
+A binary tree structure where transaction hashes are combined recursively.
+
+---
+
+## 4. Merkle Root
+
+The final hash obtained after combining all transaction hashes.
+
+---
+
+## 5. SHA-256
+
+A cryptographic hashing algorithm used in Bitcoin.
+
+---
+
+## 6. Data Integrity
+
+Ensures transaction data is not modified.
+
+---
+
+# Mathematical Concept
+
+## Hashing Formula
+
+Hash = SHA256(Transaction\ Data)
+
+---
+
+## Merkle Root Concept
+
+Merkle\ Root = SHA256(Hash_1 + Hash_2)
+
+---
+
+# Algorithm
+
+1. Read transactions from file.
+2. Hash all transactions using SHA-256.
+3. Pair transaction hashes.
+4. Combine paired hashes.
+5. Re-hash combined values.
+6. Repeat until one hash remains.
+7. Final hash becomes Merkle Root.
+
+---
+
+# Flowchart
+
+```text id="8yqzlp"
+Read Transactions → Hash Transactions → Pair Hashes → Combine Hashes → Rehash Combined Data → Generate Merkle Root
+```
+
+---
+
+# Modules Used
+
+* hashlib
+
+---
+
+# Explanation of Code
+
+The program computes the Merkle Root for sample Bitcoin transactions using SHA-256 hashing. 
+
+First, transactions are read from a text file. Each transaction is hashed individually using SHA-256 through the `hash_data()` function.
+
+The program then constructs a Merkle Tree by pairing adjacent transaction hashes and combining them. The combined hashes are hashed again to form parent nodes.
+
+If the number of hashes is odd, the last hash is duplicated to maintain the binary tree structure. This process continues recursively until only one hash remains.
+
+The final remaining hash is called the Merkle Root, which represents all transactions in the block.
+
+---
+
+# Output
+
+* Transactions hashed successfully.
+* Merkle Tree generated.
+* Final Merkle Root displayed.
+
+---
+
+# Advantages
+
+* Efficient transaction verification
+* Detects data tampering
+* Reduces verification complexity
+* Improves blockchain integrity
+
+---
+
+# Limitations
+
+* Requires repeated hashing
+* Large blocks increase computation
+
+---
+
+# Applications
+
+* Bitcoin blockchain
+* Cryptocurrency systems
+* Data verification
+* Blockchain security
+
+---
+
+# Viva Questions and Answers
+
+## Q1. What is a Bitcoin block?
+
+A structure containing transactions and block metadata.
+
+---
+
+## Q2. What is Merkle Tree?
+
+A binary tree of transaction hashes.
+
+---
+
+## Q3. What is Merkle Root?
+
+The final hash representing all transactions in a block.
+
+---
+
+## Q4. Why Merkle Root important?
+
+It ensures transaction integrity and enables efficient verification.
+
+---
+
+## Q5. Which hashing algorithm used?
+
+SHA-256.
+
+---
+
+## Q6. Why SHA-256 used in Bitcoin?
+
+Because it is secure and collision-resistant.
+
+---
+
+## Q7. Why hash transactions first?
+
+To securely represent transaction data.
+
+---
+
+## Q8. Why combine hashes?
+
+To build parent nodes in Merkle Tree.
+
+---
+
+## Q9. Why duplicate last hash when odd number exists?
+
+To maintain binary tree structure.
+
+---
+
+## Q10. What happens if one transaction changes?
+
+Merkle Root changes completely.
+
+---
+
+## Q11. What is data integrity?
+
+Ensuring data remains unchanged.
+
+---
+
+## Q12. What is collision?
+
+Two different inputs producing same hash.
+
+---
+
+## Q13. What is avalanche effect?
+
+Small input change completely changes hash.
+
+---
+
+## Q14. Why Merkle Trees efficient?
+
+Because only partial hashes are needed for verification.
+
+---
+
+## Q15. What is block header?
+
+Part of block containing metadata like Merkle Root and previous hash.
+
+---
+
+## Q16. What is nonce?
+
+A number used during Bitcoin mining.
+
+---
+
+## Q17. What is transaction verification?
+
+Checking validity and integrity of transactions.
+
+---
+
+## Q18. Applications of Merkle Root?
+
+Bitcoin, Ethereum, blockchain verification systems.
+
+---
+
+## Q19. Explain assignment flow.
+
+Read transactions → hash transactions → combine hashes → rehash → generate Merkle Root.
+
+---
+
+## Q20. Why blockchain uses Merkle Trees?
+
+To efficiently verify large numbers of transactions.
+
+---
+
+# Important Code Concepts
+
+## Transaction Hashing
+
+```text id="v94vd7"
+Transaction → SHA-256 Hash
+```
+
+---
+
+## Merkle Tree Construction
+
+```text id="i2r8al"
+Hash1 + Hash2 → SHA-256 → Parent Hash
+```
+
+---
+
+# Conclusion
+
+This assignment demonstrates the structure of Bitcoin blocks and the computation of the Merkle Root using SHA-256 hashing. The project explains how blockchain ensures transaction integrity and efficient verification using Merkle Trees.

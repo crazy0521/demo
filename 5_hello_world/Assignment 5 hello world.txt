@@ -1,0 +1,355 @@
+# Assignment: Deploy a Simple “HelloWorld” Smart Contract on Ethereum Test Network
+
+---
+
+# Title
+
+Deploy a Simple “HelloWorld” Smart Contract on Ethereum Test Network using Web3.py and Solidity
+
+---
+
+# Aim
+
+To deploy a simple HelloWorld smart contract on an Ethereum test network using Python and Web3.py. 
+
+---
+
+# Objective
+
+* To understand Ethereum smart contracts.
+* To compile Solidity contracts.
+* To connect Python with Ethereum blockchain.
+* To deploy smart contracts on Ethereum testnet.
+* To understand transaction signing and deployment.
+
+---
+
+# Theory
+
+A smart contract is a self-executing program stored on the blockchain. Ethereum smart contracts are generally written in Solidity.
+
+In this assignment, a HelloWorld smart contract is compiled using Solidity compiler (`solc`) and deployed on an Ethereum test network using Web3.py.
+
+The deployment process includes:
+
+* Connecting to Ethereum node using RPC URL
+* Compiling Solidity code
+* Generating ABI and bytecode
+* Creating deployment transaction
+* Signing transaction using private key
+* Broadcasting transaction to blockchain
+
+The deployed contract receives a unique contract address on the Ethereum blockchain.
+
+---
+
+# Important Concepts
+
+## 1. Smart Contract
+
+A self-executing blockchain program.
+
+---
+
+## 2. Ethereum Test Network
+
+A testing blockchain environment used without real cryptocurrency.
+
+Examples:
+
+* Sepolia
+* Goerli
+
+---
+
+## 3. Solidity
+
+Programming language used for Ethereum smart contracts.
+
+---
+
+## 4. ABI (Application Binary Interface)
+
+Defines how applications interact with smart contracts.
+
+---
+
+## 5. Bytecode
+
+Compiled machine-readable smart contract code deployed on blockchain.
+
+---
+
+## 6. Web3.py
+
+Python library used to interact with Ethereum blockchain.
+
+---
+
+## 7. RPC URL
+
+Endpoint used to connect to Ethereum node.
+
+---
+
+## 8. Private Key
+
+Secret cryptographic key used to sign blockchain transactions.
+
+---
+
+## 9. Nonce
+
+Transaction counter used to prevent duplicate transactions.
+
+---
+
+## 10. Gas
+
+Fee required to execute blockchain transactions.
+
+---
+
+# Mathematical / Cryptographic Concept
+
+## Transaction Signing
+
+Signed\ Transaction = Hash(Transaction\ Data + Private\ Key)
+
+---
+
+## Smart Contract Deployment Concept
+
+```text id="t5ukjm"
+Solidity Code → Compile → Generate Bytecode → Sign Transaction → Deploy to Ethereum
+```
+
+---
+
+# Algorithm
+
+1. Load environment variables.
+2. Connect to Ethereum testnet using RPC URL.
+3. Load Solidity smart contract.
+4. Compile contract using Solidity compiler.
+5. Extract ABI and bytecode.
+6. Create deployment transaction.
+7. Sign transaction using private key.
+8. Send transaction to blockchain.
+9. Wait for transaction confirmation.
+10. Store deployed contract address.
+
+---
+
+# Flowchart
+
+```text id="wn9o1n"
+Load Smart Contract → Compile Solidity Code → Generate ABI & Bytecode → Build Transaction → Sign Transaction → Deploy Contract → Get Contract Address
+```
+
+---
+
+# Modules Used
+
+* web3
+* solcx
+* dotenv
+* json
+* os
+
+---
+
+# Explanation of Code
+
+The program deploys a HelloWorld smart contract on an Ethereum test network using Python and Web3.py. 
+
+First, environment variables such as RPC URL, private key, and account address are loaded securely using dotenv. The program then connects to the Ethereum testnet using Web3 HTTP provider.
+
+The Solidity source code (`HelloWorld.sol`) is loaded and compiled using Solidity compiler version 0.8.20. Compilation generates ABI and bytecode required for deployment.
+
+Next, a contract object is created using ABI and bytecode. A deployment transaction is built with parameters such as sender address, nonce, gas limit, gas price, and chain ID.
+
+The transaction is digitally signed using the private key and sent to the Ethereum network. After mining confirmation, the deployed contract address is obtained and stored in a JSON file along with ABI.
+
+---
+
+# Output
+
+* Smart contract compiled successfully.
+* Transaction signed successfully.
+* Contract deployed on Ethereum testnet.
+* Contract address generated.
+* Deployment information saved.
+
+---
+
+# Advantages
+
+* Automated smart contract deployment
+* Secure transaction signing
+* Uses Ethereum blockchain infrastructure
+* Supports decentralized applications
+
+---
+
+# Limitations
+
+* Requires internet and Ethereum node access
+* Gas fees required
+* Incorrect private key handling may compromise security
+
+---
+
+# Applications
+
+* Decentralized applications (DApps)
+* Cryptocurrency systems
+* NFT platforms
+* Voting systems
+* Supply chain systems
+
+---
+
+# Viva Questions and Answers
+
+## Q1. What is a smart contract?
+
+A self-executing program stored on blockchain.
+
+---
+
+## Q2. What is Ethereum?
+
+A blockchain platform supporting smart contracts.
+
+---
+
+## Q3. Why use Ethereum testnet?
+
+To test applications without real cryptocurrency.
+
+---
+
+## Q4. What is Solidity?
+
+Programming language for Ethereum smart contracts.
+
+---
+
+## Q5. What is ABI?
+
+Interface used to interact with smart contracts.
+
+---
+
+## Q6. What is bytecode?
+
+Compiled machine-readable contract code.
+
+---
+
+## Q7. Why compile smart contract?
+
+To convert Solidity code into bytecode.
+
+---
+
+## Q8. What is Web3.py?
+
+Python library for interacting with Ethereum.
+
+---
+
+## Q9. What is RPC URL?
+
+Endpoint used to connect to Ethereum node.
+
+---
+
+## Q10. Why private key important?
+
+Used to sign blockchain transactions securely.
+
+---
+
+## Q11. What is nonce?
+
+Transaction counter preventing duplicate transactions.
+
+---
+
+## Q12. What is gas?
+
+Transaction fee required for blockchain operations.
+
+---
+
+## Q13. Why sign transaction?
+
+To verify transaction ownership and authenticity.
+
+---
+
+## Q14. What is chain ID?
+
+Unique identifier for blockchain network.
+
+---
+
+## Q15. What is contract address?
+
+Blockchain address where smart contract is deployed.
+
+---
+
+## Q16. What happens after deployment?
+
+Contract becomes permanently available on blockchain.
+
+---
+
+## Q17. Why save ABI?
+
+To interact with deployed smart contract later.
+
+---
+
+## Q18. Why use testnet instead of mainnet?
+
+Testing is free and safer.
+
+---
+
+## Q19. Explain assignment flow.
+
+Load contract → compile → generate bytecode → build transaction → sign transaction → deploy contract.
+
+---
+
+## Q20. Applications of smart contracts?
+
+DApps, DeFi, NFTs, voting systems, and blockchain automation.
+
+---
+
+# Important Code Concepts
+
+## Smart Contract Compilation
+
+```text id="d5ehh9"
+Solidity Code → ABI + Bytecode
+```
+
+---
+
+## Deployment Process
+
+```text id="9zw6mz"
+Build Transaction → Sign Transaction → Send to Blockchain
+```
+
+---
+
+# Conclusion
+
+This assignment demonstrates the deployment of a HelloWorld smart contract on an Ethereum test network using Python and Web3.py. It explains smart contract compilation, transaction signing, blockchain deployment, and Ethereum interaction. The project helps in understanding blockchain programming and decentralized application deployment.

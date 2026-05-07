@@ -1,0 +1,312 @@
+# Assignment: Simulate a Transaction Between Two Wallets and Check Double-Spending Prevention
+
+---
+
+# Title
+
+Simulate a Transaction Between Two Digital Wallets and Implement Double-Spending Prevention using Python
+
+---
+
+# Aim
+
+To simulate cryptocurrency transactions between wallets and implement a mechanism to prevent double spending using Python. 
+
+---
+
+# Objective
+
+* To simulate blockchain wallet transactions.
+* To understand transaction validation.
+* To prevent double spending attacks.
+* To maintain transaction history.
+* To understand balance verification in blockchain systems.
+
+---
+
+# Theory
+
+In blockchain systems, transactions occur between digital wallets. Every wallet has a balance, and transactions transfer cryptocurrency from one wallet to another.
+
+One major problem in digital currency systems is **double spending**, where the same digital coins are spent more than once. Blockchain prevents this by validating transactions and maintaining transaction history.
+
+This program simulates wallet transactions using Python dictionaries and checks whether:
+
+* The sender has enough balance.
+* The transaction ID has already been used.
+
+If the transaction ID already exists, the program detects double spending and rejects the transaction.
+
+---
+
+# Important Concepts
+
+## 1. Digital Wallet
+
+A wallet stores cryptocurrency balance and allows transactions between users.
+
+---
+
+## 2. Transaction
+
+Transfer of coins from one wallet to another.
+
+---
+
+## 3. Transaction ID (tx_id)
+
+A unique identifier for every transaction.
+
+---
+
+## 4. Double Spending
+
+Using the same cryptocurrency coins more than once.
+
+---
+
+## 5. Transaction Validation
+
+Checking whether a transaction is valid before processing.
+
+---
+
+## 6. Balance Verification
+
+Ensures sender has sufficient funds before transaction.
+
+---
+
+## 7. Transaction History
+
+Stores processed transaction IDs to prevent duplicate transactions.
+
+---
+
+# Algorithm
+
+1. Create wallet balances.
+2. Create transaction history list.
+3. Define transaction function.
+4. Check whether transaction ID already exists.
+5. Check sender balance.
+6. Transfer amount if valid.
+7. Store transaction ID in history.
+8. Display updated balances.
+
+---
+
+# Flowchart
+
+```text id="m4v0wb"
+Create Wallets → Enter Transaction → Check Transaction ID → Verify Balance → Transfer Coins → Store Transaction ID → Prevent Double Spending
+```
+
+---
+
+# Modules Used
+
+* Python Dictionary
+* Python List
+
+---
+
+# Explanation of Code
+
+The program creates three wallets: Alice, Bob, and Charlie with initial balances. A transaction history list is maintained to store processed transaction IDs. 
+
+The `send()` function simulates a transaction between wallets. First, it checks whether the transaction ID already exists in the transaction history. If it exists, the program detects double spending and rejects the transaction.
+
+Next, the program checks whether the sender has sufficient balance. If the balance is enough, coins are transferred from sender to receiver and the transaction ID is stored in transaction history.
+
+The program then demonstrates:
+
+* A successful transaction
+* A double-spending attempt
+* A transaction failure due to insufficient balance
+
+Finally, the updated balances of all wallets are displayed.
+
+---
+
+# Output
+
+* Successful transaction message displayed.
+* Double spending detected message displayed.
+* Insufficient balance message displayed.
+* Final wallet balances shown.
+
+---
+
+# Advantages
+
+* Prevents duplicate transactions
+* Detects double spending
+* Maintains transaction integrity
+* Simple blockchain transaction simulation
+
+---
+
+# Limitations
+
+* Uses simple local storage instead of distributed blockchain.
+* No cryptographic signatures.
+* No mining or consensus mechanism.
+
+---
+
+# Applications
+
+* Cryptocurrency transaction systems
+* Blockchain wallet simulations
+* Transaction verification systems
+* Digital payment systems
+
+---
+
+# Viva Questions and Answers
+
+## Q1. What is double spending?
+
+Using the same digital currency more than once.
+
+---
+
+## Q2. Why double spending is a problem?
+
+It can create fake transactions and financial fraud.
+
+---
+
+## Q3. How does program prevent double spending?
+
+By checking transaction IDs in transaction history.
+
+---
+
+## Q4. What is transaction ID?
+
+A unique identifier for every transaction.
+
+---
+
+## Q5. Why transaction ID should be unique?
+
+To avoid duplicate transactions.
+
+---
+
+## Q6. What is transaction validation?
+
+Checking whether transaction is valid before processing.
+
+---
+
+## Q7. Why check sender balance?
+
+To ensure sender has enough funds.
+
+---
+
+## Q8. What happens if balance is insufficient?
+
+Transaction is rejected.
+
+---
+
+## Q9. Why use dictionary for balances?
+
+To store wallet names and balances efficiently.
+
+---
+
+## Q10. Why use list for transaction history?
+
+To track processed transactions.
+
+---
+
+## Q11. What happens if same transaction ID used again?
+
+Double spending is detected and transaction rejected.
+
+---
+
+## Q12. What is wallet balance?
+
+Amount of cryptocurrency owned by a wallet.
+
+---
+
+## Q13. What is blockchain transaction?
+
+Transfer of cryptocurrency between wallets.
+
+---
+
+## Q14. Why blockchain secure?
+
+Because transactions are verified and recorded.
+
+---
+
+## Q15. Difference between valid and invalid transaction?
+
+* Valid → sufficient balance and unique transaction ID
+* Invalid → duplicate ID or insufficient balance
+
+---
+
+## Q16. What is tampering?
+
+Unauthorized modification of transaction data.
+
+---
+
+## Q17. How real blockchain prevents double spending?
+
+Using consensus mechanisms and distributed ledgers.
+
+---
+
+## Q18. What are limitations of this simulation?
+
+No cryptography, mining, or decentralization.
+
+---
+
+## Q19. Explain assignment flow.
+
+Create wallets → validate transaction → check balance → transfer amount → store transaction ID → prevent double spending.
+
+---
+
+## Q20. Applications of transaction validation?
+
+Cryptocurrency systems, banking, and digital payments.
+
+---
+
+# Important Code Concepts
+
+## Transaction Validation Logic
+
+```text id="m8qqd7"
+If tx_id exists → Reject transaction
+Else check balance → Process transaction
+```
+
+---
+
+## Balance Update Logic
+
+```text id="ng0jtm"
+Sender Balance -= Amount
+Receiver Balance += Amount
+```
+
+---
+
+# Conclusion
+
+This assignment demonstrates cryptocurrency transaction simulation and double-spending prevention using Python. The project validates transactions using transaction IDs and balance checking. It helps in understanding transaction integrity, wallet systems, and blockchain security concepts.

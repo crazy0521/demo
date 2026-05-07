@@ -1,0 +1,350 @@
+# Assignment: Write and Execute a Solidity Smart Contract to Transfer Tokens Between Accounts
+
+---
+
+# Title
+
+Write and Execute a Solidity Smart Contract to Transfer Tokens Between Accounts using Python and Web3.py
+
+---
+
+# Aim
+
+To deploy a Solidity token smart contract and transfer tokens between Ethereum accounts using Python and Web3.py. 
+
+---
+
+# Objective
+
+* To understand token smart contracts.
+* To deploy Solidity contracts on Ethereum blockchain.
+* To transfer tokens between accounts.
+* To interact with smart contracts using Web3.py.
+* To understand blockchain transactions and balances.
+
+---
+
+# Theory
+
+A token smart contract is a blockchain program that manages digital tokens. Ethereum tokens are generally created using Solidity and deployed on the Ethereum blockchain.
+
+In this assignment, a Solidity token contract is compiled and deployed using Python and Web3.py. After deployment, tokens are transferred from the deployer account to another account.
+
+The smart contract maintains balances for accounts and updates balances during token transfers. Transactions are signed using the sender’s private key and broadcasted to the blockchain network.
+
+The assignment demonstrates:
+
+* Smart contract deployment
+* Token balance management
+* Blockchain transaction execution
+* Interaction between Python and Ethereum
+
+---
+
+# Important Concepts
+
+## 1. Smart Contract
+
+A blockchain program that automatically executes predefined logic.
+
+---
+
+## 2. Token
+
+Digital asset stored and managed on blockchain.
+
+---
+
+## 3. Solidity
+
+Programming language used for Ethereum smart contracts.
+
+---
+
+## 4. Web3.py
+
+Python library used to interact with Ethereum blockchain.
+
+---
+
+## 5. ABI (Application Binary Interface)
+
+Interface used for communication with smart contracts.
+
+---
+
+## 6. Bytecode
+
+Compiled smart contract code deployed on blockchain.
+
+---
+
+## 7. Gas
+
+Fee required to execute blockchain transactions.
+
+---
+
+## 8. Nonce
+
+Transaction counter preventing duplicate transactions.
+
+---
+
+## 9. Token Transfer
+
+Sending tokens from one blockchain account to another.
+
+---
+
+## 10. Balance Verification
+
+Checking account balances before and after transfer.
+
+---
+
+# Mathematical / Cryptographic Concept
+
+## Transaction Signing
+
+Signed\ Transaction = Hash(Transaction\ Data + Private\ Key)
+
+---
+
+## Token Transfer Logic
+
+Sender\ Balance = Sender\ Balance - Transfer\ Amount
+
+Receiver\ Balance = Receiver\ Balance + Transfer\ Amount
+
+---
+
+# Algorithm
+
+1. Load environment variables.
+2. Connect to Ethereum blockchain.
+3. Compile Solidity smart contract.
+4. Generate ABI and bytecode.
+5. Deploy smart contract.
+6. Create token contract object.
+7. Check sender and receiver balances.
+8. Build token transfer transaction.
+9. Sign transaction using private key.
+10. Send transaction to blockchain.
+11. Verify updated balances.
+
+---
+
+# Flowchart
+
+```text id="2g1zbi"
+Load Smart Contract → Compile Contract → Deploy Token Contract → Check Balances → Build Transfer Transaction → Sign Transaction → Transfer Tokens → Verify Balances
+```
+
+---
+
+# Modules Used
+
+* web3
+* solcx
+* dotenv
+* os
+
+---
+
+# Explanation of Code
+
+The program deploys a Solidity token smart contract and transfers tokens between Ethereum accounts using Python and Web3.py. 
+
+First, environment variables such as RPC URL, private key, sender address, and receiver address are loaded securely using dotenv. The program then connects to the Ethereum blockchain using Web3 HTTP provider.
+
+The Solidity token contract (`SimpleToken.sol`) is compiled using Solidity compiler version 0.8.20. Compilation generates ABI and bytecode required for deployment.
+
+Next, a contract deployment transaction is created using an initial token supply. The deployment transaction is signed using the sender’s private key and broadcasted to the blockchain.
+
+After successful deployment, the contract object is created using the deployed contract address and ABI. The balances of sender and receiver accounts are checked using the `balanceOf()` function.
+
+A token transfer transaction is then created using the `transfer()` function. The transaction is signed, sent to blockchain, and confirmed. Finally, updated balances are displayed to verify successful token transfer.
+
+---
+
+# Output
+
+* Smart contract compiled successfully.
+* Token contract deployed successfully.
+* Initial balances displayed.
+* Tokens transferred successfully.
+* Updated balances verified.
+
+---
+
+# Advantages
+
+* Secure token transfer
+* Automated blockchain transactions
+* Decentralized token management
+* Transparent balance verification
+
+---
+
+# Limitations
+
+* Requires gas fees
+* Requires blockchain connectivity
+* Incorrect private key handling can compromise security
+
+---
+
+# Applications
+
+* Cryptocurrency systems
+* Decentralized finance (DeFi)
+* NFT marketplaces
+* Blockchain payment systems
+* Tokenized assets
+
+---
+
+# Viva Questions and Answers
+
+## Q1. What is a smart contract?
+
+A blockchain program that executes automatically.
+
+---
+
+## Q2. What is a token?
+
+A digital asset managed on blockchain.
+
+---
+
+## Q3. What is Solidity?
+
+Programming language used for Ethereum smart contracts.
+
+---
+
+## Q4. What is Web3.py?
+
+Python library used to interact with Ethereum blockchain.
+
+---
+
+## Q5. What is ABI?
+
+Interface used to interact with smart contracts.
+
+---
+
+## Q6. What is bytecode?
+
+Compiled machine-readable smart contract code.
+
+---
+
+## Q7. Why compile smart contract?
+
+To convert Solidity code into deployable bytecode.
+
+---
+
+## Q8. What is token transfer?
+
+Sending tokens from one account to another.
+
+---
+
+## Q9. What is balanceOf() function?
+
+Returns token balance of an account.
+
+---
+
+## Q10. What is transfer() function?
+
+Transfers tokens between accounts.
+
+---
+
+## Q11. Why private key important?
+
+Used to sign blockchain transactions securely.
+
+---
+
+## Q12. What is gas?
+
+Fee required for executing blockchain operations.
+
+---
+
+## Q13. What is nonce?
+
+Transaction counter preventing duplicate transactions.
+
+---
+
+## Q14. Why sign transactions?
+
+To verify ownership and authenticity.
+
+---
+
+## Q15. What happens after deployment?
+
+Contract becomes available on blockchain.
+
+---
+
+## Q16. Why use Ethereum testnet?
+
+To test applications without real cryptocurrency.
+
+---
+
+## Q17. Why check balances before and after transfer?
+
+To verify successful token transfer.
+
+---
+
+## Q18. What is decentralized system?
+
+A system without central authority.
+
+---
+
+## Q19. Explain assignment flow.
+
+Compile contract → deploy contract → check balances → transfer tokens → verify balances.
+
+---
+
+## Q20. Applications of token smart contracts?
+
+Cryptocurrency, DeFi, NFTs, and digital payments.
+
+---
+
+# Important Code Concepts
+
+## Smart Contract Compilation
+
+```text id="it75rr"
+Solidity Code → ABI + Bytecode
+```
+
+---
+
+## Token Transfer Process
+
+```text id="spv3n4"
+Build Transaction → Sign Transaction → Send Transaction → Update Balances
+```
+
+---
+
+# Conclusion
+
+This assignment demonstrates writing and executing a Solidity token smart contract using Python and Web3.py. The project explains smart contract deployment, blockchain transactions, token transfers, and balance verification. It helps in understanding decentralized token systems and Ethereum blockchain interaction.

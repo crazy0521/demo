@@ -1,0 +1,233 @@
+# Assignment 2: Implement a Block Verification Function to Validate Chain Integrity
+
+## Title
+
+Implement a Block Verification Function to Validate Blockchain Integrity using Python
+
+---
+
+# Aim
+
+To implement a blockchain verification function in Python to validate the integrity and security of blockchain data.
+
+---
+
+# Objective
+
+* To understand blockchain validation.
+* To verify integrity of linked blocks.
+* To detect tampering in blockchain.
+* To validate hashes and previous hash links.
+* To understand immutability in blockchain.
+
+---
+
+# Theory
+
+Blockchain is a secure distributed ledger where blocks are connected using cryptographic hashes. Every block contains its own hash and the hash of the previous block.
+
+Blockchain verification is the process of checking whether:
+
+* The current hash of each block is valid.
+* The previous hash stored in a block matches the hash of the previous block.
+
+If any block data changes, the hash changes completely, breaking the blockchain integrity.
+
+The verification function ensures:
+
+* Data integrity
+* Tamper detection
+* Security of blockchain
+
+---
+
+# Important Concepts
+
+## 1. Blockchain Integrity
+
+Ensures that blockchain data has not been modified.
+
+## 2. Hash Verification
+
+Checks whether stored hash matches recalculated hash.
+
+## 3. Previous Hash Validation
+
+Verifies linking between consecutive blocks.
+
+## 4. Immutability
+
+Data cannot be altered without affecting the entire blockchain.
+
+## 5. Tampering Detection
+
+Modification in block data invalidates the blockchain.
+
+---
+
+# Hashing Concept
+
+Hash = SHA256(Data + Timestamp + Previous_Hash)
+
+---
+
+# Algorithm
+
+1. Create blockchain with linked blocks.
+2. Traverse all blocks in the chain.
+3. Recalculate hash of each block.
+4. Compare recalculated hash with stored hash.
+5. Verify previous hash linkage.
+6. If mismatch found, blockchain is invalid.
+7. Otherwise blockchain is valid.
+
+---
+
+# Flowchart
+
+Create Blockchain → Traverse Blocks → Recalculate Hash → Compare Hashes → Verify Previous Hash → Validate Blockchain Integrity
+
+---
+
+# Modules Used
+
+* hashlib
+* datetime
+
+---
+
+# Explanation of Code
+
+The program implements blockchain verification using Python. A blockchain is created where every block contains data, timestamp, previous hash, and its own hash generated using SHA-256.
+
+A verification function is implemented to validate the blockchain. The function traverses all blocks and recalculates hashes for each block. It compares the recalculated hash with the stored hash.
+
+The function also checks whether the previous hash stored in the current block matches the hash of the previous block. If any mismatch occurs, it indicates tampering and the blockchain becomes invalid.
+
+This assignment demonstrates how blockchain ensures security and integrity through cryptographic linking and verification.
+
+---
+
+# Output
+
+* Blockchain created successfully.
+* Verification process executed.
+* Valid blockchain message displayed.
+* Tampering detected if data modified.
+
+---
+
+# Advantages
+
+* Detects tampering
+* Ensures data integrity
+* Improves blockchain security
+* Validates chain consistency
+
+---
+
+# Limitations
+
+* Verification becomes slower for very large blockchains.
+* High computational overhead.
+
+---
+
+# Applications
+
+* Cryptocurrency validation
+* Secure transaction systems
+* Banking systems
+* Supply chain verification
+* Healthcare data security
+
+---
+
+# Viva Questions and Answers
+
+## Q1. What is blockchain verification?
+
+Blockchain verification checks whether blockchain data and links are valid.
+
+## Q2. Why verification is important?
+
+To detect tampering and maintain integrity.
+
+## Q3. What is chain integrity?
+
+Ensuring all blocks are correctly linked and unchanged.
+
+## Q4. What does verification function check?
+
+* Current hash validity
+* Previous hash linkage
+
+## Q5. What happens if block data changes?
+
+Its hash changes and blockchain becomes invalid.
+
+## Q6. Why compare hashes?
+
+To detect data modification.
+
+## Q7. Why previous hash important?
+
+It securely links blocks together.
+
+## Q8. What is tampering?
+
+Unauthorized modification of block data.
+
+## Q9. Which hashing algorithm used?
+
+SHA-256.
+
+## Q10. Why SHA-256 used?
+
+Because it is secure and collision-resistant.
+
+## Q11. What is immutability?
+
+Blockchain data cannot be changed easily.
+
+## Q12. What is avalanche effect?
+
+Small input change creates completely different hash.
+
+## Q13. What is collision?
+
+Two different inputs generating same hash.
+
+## Q14. How blockchain detects tampering?
+
+By comparing hashes and previous hash links.
+
+## Q15. Why blockchain secure?
+
+Because of cryptographic hashing and linked blocks.
+
+## Q16. What is genesis block?
+
+The first block in blockchain.
+
+## Q17. Why use timestamp?
+
+To record block creation time.
+
+## Q18. Blockchain vs database?
+
+Blockchain is immutable and decentralized, database is editable and centralized.
+
+## Q19. Explain verification flow.
+
+Traverse blocks → recalculate hash → compare hashes → verify previous hash → validate chain.
+
+## Q20. What are applications of verification?
+
+Transaction validation, fraud detection, and secure record keeping.
+
+---
+
+# Conclusion
+
+This assignment demonstrates blockchain verification and integrity validation using Python. The verification function ensures that blocks are securely linked and detects any tampering in the blockchain. The project helps in understanding blockchain security, immutability, and chai

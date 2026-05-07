@@ -1,0 +1,346 @@
+# Assignment: Generate a Pair of Public/Private Keys and Simulate a Digital Wallet
+
+---
+
+# Title
+
+Generate a Pair of Public and Private Keys and Simulate a Digital Wallet using Python
+
+---
+
+# Aim
+
+To generate public and private cryptographic keys and simulate a digital wallet using Python.
+
+---
+
+# Objective
+
+* To understand public and private key cryptography.
+* To generate secure key pairs.
+* To simulate a digital wallet system.
+* To understand digital signatures and wallet security.
+* To study cryptographic hashing and asymmetric encryption.
+
+---
+
+# Theory
+
+A digital wallet is a software application used to store and manage cryptocurrency keys securely. It uses asymmetric cryptography, where two mathematically related keys are generated:
+
+* Public Key
+* Private Key
+
+The private key is secret and used for authentication and digital signatures, while the public key is shared publicly to receive transactions.
+
+The wallet address is generated from the public key. Blockchain wallets do not store actual cryptocurrency; instead, they store cryptographic keys used to access blockchain assets.
+
+The assignment demonstrates the use of cryptography, hashing, and digital signatures to simulate wallet generation and secure transaction handling.
+
+---
+
+# Important Concepts
+
+## 1. Private Key
+
+A secret cryptographic key used to:
+
+* Access wallet
+* Sign transactions
+* Prove ownership
+
+The private key must never be shared.
+
+---
+
+## 2. Public Key
+
+A public cryptographic key generated from the private key.
+
+Used to:
+
+* Receive cryptocurrency
+* Verify digital signatures
+
+---
+
+## 3. Key Pair
+
+Combination of:
+
+* Public key
+* Private key
+
+generated mathematically together.
+
+---
+
+## 4. Digital Wallet
+
+A software system that stores:
+
+* Public key
+* Private key
+* Wallet address
+
+---
+
+## 5. Wallet Address
+
+A shorter representation generated from the public key and used for receiving cryptocurrency.
+
+---
+
+## 6. Asymmetric Cryptography
+
+Encryption technique using two different keys:
+
+* Public key
+* Private key
+
+---
+
+## 7. Digital Signature
+
+A cryptographic signature created using the private key and verified using the public key.
+
+---
+
+## 8. Hashing
+
+A process that converts data into a fixed-length secure value.
+
+Common hashing algorithm:
+
+* SHA-256
+
+---
+
+## 9. Elliptic Curve Cryptography (ECC)
+
+A mathematical cryptographic method used for secure key generation in blockchain systems.
+
+---
+
+# Mathematical Concepts
+
+## Hashing Concept
+
+Hash = SHA256(Data)
+
+---
+
+## Digital Signature Concept
+
+```text
+Private Key → Generate Signature
+Public Key → Verify Signature
+```
+
+---
+
+# Algorithm
+
+1. Generate a random private key.
+2. Generate public key from private key.
+3. Generate wallet address from public key.
+4. Store keys securely.
+5. Simulate wallet operations.
+6. Use private key for digital signature.
+7. Verify signature using public key.
+
+---
+
+# Flowchart
+
+```text
+Generate Private Key → Generate Public Key → Create Wallet Address → Store Keys → Sign Transactions → Verify Signature
+```
+
+---
+
+# Modules Used
+
+* hashlib
+* ecdsa
+* secrets
+* base58
+
+---
+
+# Explanation of Code
+
+The program generates a public and private key pair using cryptographic algorithms. First, a random private key is generated securely. Then, the public key is mathematically derived from the private key using elliptic curve cryptography.
+
+The public key is further processed to create a wallet address. The wallet stores these keys securely and simulates digital wallet functionality.
+
+The private key is used to digitally sign transactions, while the public key is used to verify signatures. Hashing algorithms such as SHA-256 are used to secure wallet data and generate unique identifiers.
+
+The assignment demonstrates the fundamental concepts of blockchain wallet security and cryptographic authentication.
+
+---
+
+# Output
+
+* Private key generated successfully.
+* Public key generated successfully.
+* Wallet address created.
+* Digital signature generated and verified.
+* Wallet simulation completed.
+
+---
+
+# Advantages
+
+* Secure authentication
+* Safe transaction verification
+* Prevents unauthorized access
+* Supports blockchain security
+* Uses strong cryptographic methods
+
+---
+
+# Limitations
+
+* Loss of private key results in permanent wallet loss.
+* Cryptographic operations may require high computation.
+* Requires secure storage of keys.
+
+---
+
+# Applications
+
+* Cryptocurrency wallets
+* Blockchain authentication
+* Digital signatures
+* Secure transactions
+* Identity verification
+
+---
+
+# Viva Questions and Answers
+
+## Q1. What is a private key?
+
+A secret key used to access wallet and sign transactions.
+
+---
+
+## Q2. What is a public key?
+
+A key generated from the private key and used for verification and receiving cryptocurrency.
+
+---
+
+## Q3. What is asymmetric cryptography?
+
+Encryption using two different keys: public and private keys.
+
+---
+
+## Q4. Why private key should remain secret?
+
+Anyone with private key can access the wallet.
+
+---
+
+## Q5. Can public key generate private key?
+
+No, it is computationally infeasible.
+
+---
+
+## Q6. What is a wallet address?
+
+A shorter representation generated from the public key.
+
+---
+
+## Q7. What is digital signature?
+
+A cryptographic signature used to verify ownership and authenticity.
+
+---
+
+## Q8. Which hashing algorithm commonly used?
+
+SHA-256.
+
+---
+
+## Q9. What is hashing?
+
+Converting data into fixed-length secure value.
+
+---
+
+## Q10. Difference between hashing and encryption?
+
+* Hashing is one-way.
+* Encryption is reversible.
+
+---
+
+## Q11. What is ECC?
+
+Elliptic Curve Cryptography used for secure key generation.
+
+---
+
+## Q12. Why ECC used in blockchain?
+
+Provides strong security with smaller key sizes.
+
+---
+
+## Q13. Why random key generation important?
+
+To prevent prediction and hacking.
+
+---
+
+## Q14. What happens if private key is lost?
+
+Wallet access is permanently lost.
+
+---
+
+## Q15. How digital signature verified?
+
+Using the public key.
+
+---
+
+## Q16. Why blockchain wallets secure?
+
+Because of cryptographic key mechanisms.
+
+---
+
+## Q17. Does wallet store cryptocurrency?
+
+No, it stores cryptographic keys.
+
+---
+
+## Q18. Applications of digital wallets?
+
+Cryptocurrency transactions and secure authentication.
+
+---
+
+## Q19. Explain assignment flow.
+
+Generate private key → generate public key → create wallet address → sign transactions → verify signatures.
+
+---
+
+## Q20. Why hashing important in wallet systems?
+
+To maintain security and integrity.
+
+---
+
+# Conclusion
+
+This assignment demonstrates the generation of public and private cryptographic keys and the simulation of a digital wallet using Python. It explains the use of asymmetric cryptography, hashing, and digital signatures in blockchain systems. The project helps in understanding wallet security, authentication, and blockchain-based transaction verification.
